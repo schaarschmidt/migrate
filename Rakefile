@@ -17,7 +17,7 @@ end
 
 
 namespace :sync do
-  task :all => [:pgd, :pbv]
+  task :all => [:pgd, :pbv, :poz, :hissosexp]
 end
 
 task :environment do

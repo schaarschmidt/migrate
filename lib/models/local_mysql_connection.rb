@@ -9,8 +9,8 @@ class LocalMysqlConnection < ActiveRecord::Base
     adapter:  'mysql2',
     host:     'localhost',
     socket:   '/tmp/mysql.sock',
-    username: '',
-    password: '',
+    username: 'root',
+    password: 'geheim',
     database: 'testdb',
     encoding: 'utf8'
   )

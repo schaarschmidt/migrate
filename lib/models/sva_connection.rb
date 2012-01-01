@@ -11,6 +11,7 @@ class SvaConnection < ActiveRecord::Base
     port:     ENV.fetch('PG_ZUV_PORT'),
     username: ENV.fetch('PG_ZUV_USER'),
     password: ENV.fetch('PG_ZUV_PASSWORD'),
-    database: ENV.fetch('PG_ZUV_INSTANCE')
+    database: ENV.fetch('PG_ZUV_INSTANCE'),
+    encoding: 'UTF-8'
   )
 end

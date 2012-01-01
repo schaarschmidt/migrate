@@ -1,6 +1,6 @@
 
-require 'local_mysql_connection'
+require 'local_postgresql_connection'
 
-class LocalPersonalPgd < LocalMysqlConnection
+class LocalPersonalPgd < LocalPostgresConnection
   self.table_name = 'sva_personal_pgd_tbl'
 end
