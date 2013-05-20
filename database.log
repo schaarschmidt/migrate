@@ -1,0 +1,99 @@
+D, [2013-05-18T10:35:34.193566 #48425] DEBUG -- :   [1m[36m (11.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+D, [2013-05-18T10:35:34.213262 #48425] DEBUG -- :   [1m[35m (18.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+D, [2013-05-18T10:35:34.218522 #48425] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-18T10:35:34.220730 #48425]  INFO -- : Migrating to TestMigration (1)
+D, [2013-05-18T10:35:34.237466 #48425] DEBUG -- :   [1m[35m (11.4ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL) ENGINE=InnoDB
+D, [2013-05-18T10:35:34.245649 #48425] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2013-05-18T10:35:34.255548 #48425] DEBUG -- :   [1m[35mSQL (1.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('1')
+D, [2013-05-18T10:35:34.256621 #48425] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2013-05-19T17:15:07.242506 #3309] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:15:07.252964 #3309]  INFO -- : Migrating to SvaPersonalPgdTbl (2)
+D, [2013-05-19T17:15:40.744099 #3518] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:15:40.753305 #3518]  INFO -- : Migrating to SvaPersonalPgdTbl (2)
+D, [2013-05-19T17:15:40.779252 #3518] DEBUG -- :   [1m[35m (9.4ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:15:40.780622 #3518] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2013-05-19T17:15:40.790135 #3518] DEBUG -- :   [1m[35mSQL (2.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('2')
+D, [2013-05-19T17:15:40.791238 #3518] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2013-05-19T17:25:16.152955 #3966] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2013-05-19T17:26:04.293868 #4154] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:26:04.303607 #4154]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:26:04.321213 #4154] DEBUG -- :   [1m[35m (0.7ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+E, [2013-05-19T17:26:04.321360 #4154] ERROR -- : Mysql2::Error: Table 'sva_personal_pgd_tbl' already exists: CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:26:23.330509 #4209] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:26:23.339746 #4209]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:26:23.374181 #4209] DEBUG -- :   [1m[35m (18.0ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:26:23.395074 #4209] DEBUG -- :   [1m[36m (19.3ms)[0m  [1mCREATE INDEX `index_sva_personal_pgd_tbl_on_pgd_join_id` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T17:30:28.211966 #4620] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:30:28.221106 #4620]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:30:28.252313 #4620] DEBUG -- :   [1m[35m (14.1ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:30:28.274261 #4620] DEBUG -- :   [1m[36m (20.3ms)[0m  [1mCREATE INDEX `index_sva_personal_pgd_tbl_on_pgd_join_id` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T17:31:31.118973 #4845] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:31:31.128379 #4845]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:31:31.145736 #4845] DEBUG -- :   [1m[35m (0.9ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+E, [2013-05-19T17:31:31.145857 #4845] ERROR -- : Mysql2::Error: Table 'sva_personal_pgd_tbl' already exists: CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:31:46.531378 #4898] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:31:46.540612 #4898]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:31:46.565708 #4898] DEBUG -- :   [1m[35m (8.7ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:31:46.568283 #4898] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCREATE pgd_join_id INDEX `index_sva_personal_pgd_tbl_on_sva_personal_pgd_idx1` ON `sva_personal_pgd_tbl` (`sva_personal_pgd_idx1`) [0m
+E, [2013-05-19T17:31:46.568386 #4898] ERROR -- : Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'pgd_join_id INDEX `index_sva_personal_pgd_tbl_on_sva_personal_pgd_idx1`  ON `sva' at line 1: CREATE pgd_join_id INDEX `index_sva_personal_pgd_tbl_on_sva_personal_pgd_idx1`  ON `sva_personal_pgd_tbl` (`sva_personal_pgd_idx1`) 
+D, [2013-05-19T17:37:06.552471 #5597] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:37:06.562364 #5597]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:43:25.209598 #6287] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:43:25.218736 #6287]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:47:58.102699 #6658] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:47:58.112901 #6658]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:47:58.137753 #6658] DEBUG -- :   [1m[35m (8.0ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:47:58.154846 #6658] DEBUG -- :   [1m[36m (15.5ms)[0m  [1mCREATE UNIQUE INDEX `index_sva_personal_pgd_tbl_on_pgd_join_id` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T17:47:58.156158 #6658] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2013-05-19T17:47:58.164415 #6658] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('3')[0m
+D, [2013-05-19T17:47:58.165349 #6658] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2013-05-19T17:52:28.199518 #6943] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2013-05-19T17:52:56.359323 #7003] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:52:56.369637 #7003]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:52:56.398782 #7003] DEBUG -- :   [1m[35m (8.0ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:52:56.415485 #7003] DEBUG -- :   [1m[36m (15.1ms)[0m  [1mCREATE UNIQUE INDEX `index_sva_personal_pgd_tbl_on_pgd_join_id` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T17:54:26.263260 #7173] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:54:26.272487 #7173]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:54:26.289573 #7173] DEBUG -- :   [1m[35m (0.6ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+E, [2013-05-19T17:54:26.289693 #7173] ERROR -- : Mysql2::Error: Table 'sva_personal_pgd_tbl' already exists: CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:54:44.010603 #7227] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T17:54:44.019735 #7227]  INFO -- : Migrating to SvaPersonalPgdTbl (3)
+D, [2013-05-19T17:54:44.050428 #7227] DEBUG -- :   [1m[35m (13.8ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T17:54:44.069552 #7227] DEBUG -- :   [1m[36m (17.2ms)[0m  [1mCREATE UNIQUE INDEX `sva_personal_pgd_idx1` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T17:54:44.088779 #7227] DEBUG -- :   [1m[35m (17.8ms)[0m  CREATE UNIQUE INDEX `sva_personal_pgd_idx2` ON `sva_personal_pgd_tbl` (`pgd_name`, `pgd_vorname`, `pgd_geburtsdatum`) 
+D, [2013-05-19T17:54:44.107568 #7227] DEBUG -- :   [1m[36m (17.1ms)[0m  [1mCREATE INDEX `sva_personal_pgd_idx3` ON `sva_personal_pgd_tbl` (`pgd_enddatum`) [0m
+D, [2013-05-19T17:54:44.108804 #7227] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2013-05-19T17:54:44.117246 #7227] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('3')[0m
+D, [2013-05-19T17:54:44.118302 #7227] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2013-05-19T23:21:38.232386 #26270] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T23:21:38.242616 #26270]  INFO -- : Migrating to SvaPersonalPgdTbl (4)
+D, [2013-05-19T23:21:38.273907 #26270] DEBUG -- :   [1m[35m (23.3ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_enddatum` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T23:21:38.297736 #26270] DEBUG -- :   [1m[36m (22.1ms)[0m  [1mCREATE UNIQUE INDEX `sva_personal_pgd_idx1` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T23:21:38.317119 #26270] DEBUG -- :   [1m[35m (17.9ms)[0m  CREATE UNIQUE INDEX `sva_personal_pgd_idx2` ON `sva_personal_pgd_tbl` (`pgd_name`, `pgd_vorname`, `pgd_geburtsdatum`) 
+D, [2013-05-19T23:21:38.335288 #26270] DEBUG -- :   [1m[36m (16.6ms)[0m  [1mCREATE INDEX `sva_personal_pgd_idx3` ON `sva_personal_pgd_tbl` (`pgd_enddatum`) [0m
+D, [2013-05-19T23:21:38.336528 #26270] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2013-05-19T23:21:38.346578 #26270] DEBUG -- :   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('4')[0m
+D, [2013-05-19T23:21:38.347717 #26270] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2013-05-19T23:44:30.952082 #27424] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T23:44:30.962577 #27424]  INFO -- : Migrating to SvaPersonalPgdTbl (5)
+D, [2013-05-19T23:44:30.991282 #27424] DEBUG -- :   [1m[35m (19.1ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pgd_join_id` int(11) NOT NULL, `pgd_name` varchar(255) NOT NULL, `pgd_vorname` varchar(255) NOT NULL, `pgd_titel` varchar(255), `pgd_geburtsdatum` date NOT NULL, `pgd_geschlecht` varchar(255) NOT NULL, `pgd_endedatum` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T23:44:31.010171 #27424] DEBUG -- :   [1m[36m (17.3ms)[0m  [1mCREATE UNIQUE INDEX `sva_personal_pgd_idx1` ON `sva_personal_pgd_tbl` (`pgd_join_id`) [0m
+D, [2013-05-19T23:44:31.026121 #27424] DEBUG -- :   [1m[35m (14.6ms)[0m  CREATE UNIQUE INDEX `sva_personal_pgd_idx2` ON `sva_personal_pgd_tbl` (`pgd_name`, `pgd_vorname`, `pgd_geburtsdatum`) 
+D, [2013-05-19T23:44:31.043621 #27424] DEBUG -- :   [1m[36m (16.0ms)[0m  [1mCREATE INDEX `sva_personal_pgd_idx3` ON `sva_personal_pgd_tbl` (`pgd_endedatum`) [0m
+D, [2013-05-19T23:44:31.044966 #27424] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2013-05-19T23:44:31.054746 #27424] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('5')[0m
+D, [2013-05-19T23:44:31.055751 #27424] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2013-05-19T23:50:29.562060 #27816] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T23:50:29.571799 #27816]  INFO -- : Migrating to SvaPersonalPbvTbl (6)
+D, [2013-05-19T23:50:29.579906 #27816] DEBUG -- :   [1m[35m (0.6ms)[0m  CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pbv_pgd_join_id` int(11) NOT NULL, `pbv_nr` int(11) NOT NULL, `pbv_dienstart` varchar(255) NOT NULL, `pbv_flag` varchar(255), `pbv_lehrende` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+E, [2013-05-19T23:50:29.580056 #27816] ERROR -- : Mysql2::Error: Table 'sva_personal_pgd_tbl' already exists: CREATE TABLE `sva_personal_pgd_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pbv_pgd_join_id` int(11) NOT NULL, `pbv_nr` int(11) NOT NULL, `pbv_dienstart` varchar(255) NOT NULL, `pbv_flag` varchar(255), `pbv_lehrende` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T23:50:56.498651 #27943] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2013-05-19T23:50:56.511792 #27943]  INFO -- : Migrating to SvaPersonalPbvTbl (6)
+D, [2013-05-19T23:50:56.530557 #27943] DEBUG -- :   [1m[35m (7.8ms)[0m  CREATE TABLE `sva_personal_pbv_tbl` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pbv_pgd_join_id` int(11) NOT NULL, `pbv_nr` int(11) NOT NULL, `pbv_dienstart` varchar(255) NOT NULL, `pbv_flag` varchar(255), `pbv_lehrende` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+D, [2013-05-19T23:50:56.548672 #27943] DEBUG -- :   [1m[36m (15.9ms)[0m  [1mCREATE INDEX `sva_personal_pbv_idx1` ON `sva_personal_pbv_tbl` (`pbv_pgd_join_id`) [0m
+D, [2013-05-19T23:50:56.564847 #27943] DEBUG -- :   [1m[35m (14.3ms)[0m  CREATE INDEX `sva_personal_pbv_idx2` ON `sva_personal_pbv_tbl` (`pbv_dienstart`) 
+D, [2013-05-19T23:50:56.583094 #27943] DEBUG -- :   [1m[36m (16.2ms)[0m  [1mCREATE INDEX `sva_personal_pbv_idx3` ON `sva_personal_pbv_tbl` (`pbv_lehrende`) [0m
+D, [2013-05-19T23:50:56.600817 #27943] DEBUG -- :   [1m[35m (16.0ms)[0m  CREATE INDEX `sva_personal_pbv_idx4` ON `sva_personal_pbv_tbl` (`pbv_nr`) 
+D, [2013-05-19T23:50:56.602419 #27943] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2013-05-19T23:50:56.611795 #27943] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('6')
+D, [2013-05-19T23:50:56.612662 #27943] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
