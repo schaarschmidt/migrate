@@ -2,8 +2,8 @@
 namespace :sync do
   desc "Syncronize sva_personal_pbv_tbl"
   task :pbv do
-    require './local_personal_pbv'
-    require './sva_personal_pbv'
+    require 'local_personal_pbv'
+    require 'sva_personal_pbv'
 
     LocalPersonalPbv.connection.execute "truncate table #{LocalPersonalPbv.table_name}"
 

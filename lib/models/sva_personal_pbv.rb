@@ -1,5 +1,5 @@
 
-require './sva_connection'
+require 'sva_connection'
 
 class SvaPersonalPbv < SvaConnection
   self.table_name = 'personal_pbv'

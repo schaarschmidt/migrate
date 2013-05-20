@@ -1,5 +1,7 @@
 # encoding: utf-8
 
+$: << File.expand_path('../lib/models',__FILE__)
+
 require 'active_record'
 require 'yaml'
 require 'logger'
