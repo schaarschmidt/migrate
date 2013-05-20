@@ -2,10 +2,7 @@
 
 require 'active_record'
 require 'yaml'
-# require 'mysql2'
-# require 'logger'
-require 'ap'
-require 'pry'
+require 'logger'
 
 namespace :db do
   desc "Migrate the database through scripts in db/migrate. Target specific version with VERSION=x"
